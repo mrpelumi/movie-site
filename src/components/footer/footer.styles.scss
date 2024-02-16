@@ -1,0 +1,25 @@
+@use '../../utils/styles/variables' as v;
+
+.footer{
+  border-top: 1px solid v.$icon-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: v.$text-color;
+  span {
+    font-size: 1rem;
+    color: v.$complementary-text-color;
+  }
+}
+.copyright-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 1.5rem;
+  
+  span{
+    color: v.$text-color;
+  }
+}

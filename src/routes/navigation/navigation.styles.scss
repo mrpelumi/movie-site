@@ -1,0 +1,157 @@
+@use '../../utils/styles/variables' as v;
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10rem;
+  gap: 2rem;
+}
+
+// Navigation Container
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid v.$icon-color;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+// Navigation Image
+
+.nav-image-container{
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex: 0.2;
+
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.nav-image-container:hover {
+  cursor: pointer;
+}
+
+// Navigation Links
+
+.nav-link-container{
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  flex: 2;
+  justify-content: space-around;
+  align-items: center;
+
+  .nav-link-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: v.$icon-color;
+  }
+
+  .nav-link-item:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+}
+
+// Navigation Pipe
+.nav-pipe{
+  border: 1px solid none;
+  border-radius: 0.1rem;
+  padding: 0.1rem;
+  height: 2.5rem;
+  background-color: v.$icon-color;
+}
+
+// Navigation Social Icons
+
+.nav-social-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.6rem;
+  flex: 0.4;
+}
+
+.hamburger-icon-container{
+  display: none;  
+}
+
+.menu-container{
+  display: none;
+}
+
+@media screen and (max-width:992px){
+  .main-container{
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .nav-link-container, .nav-pipe, .nav-social-container{
+    display: none;
+  }
+  
+  .nav-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .hamburger-icon-container{
+    display: flex;
+    cursor: pointer;
+  }
+
+  .menu-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid v.$icon-color;
+    padding: 1.2rem;
+    gap: 1.2rem;
+    width: 40%;
+    position: absolute;
+    top: 4.5rem;
+    right: 0.7rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    border-radius: 0.6rem;
+
+    hr{
+      color: v.$text-color;
+    }
+  }
+
+  .menu-nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .menu-nav-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: v.$text-color;
+  }
+
+  .menu-nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+
+  .menu-social-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+

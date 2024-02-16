@@ -1,0 +1,19 @@
+@use '../../utils/styles/variables' as v;
+
+.load-more-button{
+  width: 10rem;
+  padding: 0.7rem;
+  background: none;
+  border: 1px solid v.$text-color;
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
+  font-weight: 400;
+  color: v.$text-color;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+.load-more-button:hover{
+  background: v.$text-color;
+  color: v.$bg-color;
+  border: 1px solid v.$text-color;
+}

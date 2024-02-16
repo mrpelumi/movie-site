@@ -1,0 +1,21 @@
+@use '../../utils/styles/variables' as v;
+
+.subhead-title-container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+
+  h3{ 
+    color: v.$text-color;
+    font-size: v.$section-header-font-size;
+  }
+  
+  hr{
+    background-color: v.$icon-color;
+    width: 5rem;
+    height: 0.3rem;
+    border-radius: 1.5rem;
+  }
+}

@@ -1,0 +1,72 @@
+@use '../../utils/styles/variables' as v;
+
+.movie-card-container{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: flex-start;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.movie-img-container{
+  height: 15rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0 0 0.7rem 0.7rem;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-out;
+    object-position: center;
+  }
+  img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.movie-title-container{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+
+  h3{
+    font-size: 1.1rem;
+    color: v.$complementary-text-color;
+    text-transform: capitalize;
+  }
+  h3:hover {
+    color: v.$text-color;
+    cursor: pointer;
+  }
+  p{
+    font-size: 1rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .movie-card-container{
+    width: 40%;
+  }
+  .movie-img-container{
+    img{
+      object-position: center;
+    }
+  }
+}
+
+@media screen and (max-width:576px) {
+  .movie-card-container{
+    width: 100%;
+  }
+  .movie-img-container{
+    img{
+      object-position: center;
+    }
+  }
+}
